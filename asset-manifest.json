@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/TarasMysiura/carRental/static/css/main.7acaea2f.css",
+    "main.js": "/TarasMysiura/carRental/static/js/main.07d3183d.js",
+    "index.html": "/TarasMysiura/carRental/index.html",
+    "main.7acaea2f.css.map": "/TarasMysiura/carRental/static/css/main.7acaea2f.css.map",
+    "main.07d3183d.js.map": "/TarasMysiura/carRental/static/js/main.07d3183d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.07d3183d.js"
+  ]
+}
