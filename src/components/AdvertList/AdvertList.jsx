@@ -8,7 +8,7 @@ import { getFilterValue } from 'redux/filterSlice';
 
 
 export const AdvertList = ({adverts}) => {
-  console.log('adverts: ', adverts);
+  // console.log('adverts: ', adverts);
 
 
   // const adverds = useSelector(getAdverds);

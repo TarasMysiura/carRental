@@ -1,27 +1,41 @@
 import { createSlice } from '@reduxjs/toolkit';
+import {
+  fetchAdverts,
+} from './advertsOperations';
 
-const initialState = {
-  adverts: [],
+const handlePending = state => {
+  state.isLoading = true;
+};
+
+const handleRejected = (state, action) => {
+  state.isLoading = false;
+  state.error = action.payload;
+};
+
+const advertsInitialState = {
+  items: [],
+  isLoading: false,
+  error: null,
 };
 
 const advertsSlice = createSlice({
-  name: 'adverds',
-  initialState,
-  reducers: {
-    addContact: (state, action) => {
-      state.adverts = [...state.adverts, action.payload];
-    },
+  name: 'adverts',
+  initialState: advertsInitialState,
 
-    removeContact: (state, action) => {
-      state.adverts = state.adverts.filter(
-        advert => advert.id !== action.payload
-      );
-    },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchAdverts.pending, (state) => {
+        handlePending(state);
+      })
+      .addCase(fetchAdverts.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.items = action.payload;
+      })
+      .addCase(fetchAdverts.rejected, (state, action) => {
+        handleRejected(state, action);
+      });
   },
 });
 
-export const { addAdvert, removeAdvert } = advertsSlice.actions;
-
 export const advertsReducer = advertsSlice.reducer;
-
-export const getAdverds = state => state.adverds.adverds;

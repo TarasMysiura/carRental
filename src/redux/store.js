@@ -1,31 +1,21 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore } from "@reduxjs/toolkit";
+
+import { advertsReducer } from "./advertsSlice";
 import {
-  persistStore,
-  persistReducer,
   FLUSH,
-  REHYDRATE,
   PAUSE,
   PERSIST,
   PURGE,
   REGISTER,
-} from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
-import { advertsReducer } from './advertsSlice';
-import { filterSliceReducer } from './filterSlice';
-
-const advertsPersistConfig = {
-  key: 'adverts',
-  storage,
-  whitelist: ['adverts'],
-  blacklist: ['filter'],
-};
+  REHYDRATE,
+} from "redux-persist";
+import persistStore from "redux-persist/es/persistStore";
 
 export const store = configureStore({
   reducer: {
-    adverts: persistReducer(advertsPersistConfig, advertsReducer),
-    filterAdverts: filterSliceReducer,
+    adverts: advertsReducer,
   },
-  middleware: getDefaultMiddleware =>
+  middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
