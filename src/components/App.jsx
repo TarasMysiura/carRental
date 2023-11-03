@@ -1,16 +1,23 @@
+import { SearchForm } from './SearchForm/SearchForm';
+import { AdvertList } from './AdvertList/AdvertList';
+import { Container, TitleH2 } from './App.styled';
+import { Filter } from './Filter/Filter';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useSelector } from 'react-redux';
+import { getContacts } from 'redux/advertsSlice';
+import { adversCars } from 'redux/data';
+
 export const App = () => {
+  // const contacts = useSelector(getContacts);
+
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Container>
+      <SearchForm />
+     
+          <AdvertList adverts={adversCars}/>
+     
+      <ToastContainer />
+    </Container>
   );
 };

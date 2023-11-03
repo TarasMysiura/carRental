@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Manrope-400';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Manrope Bold'), url('./Manrope-Light.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'Manrope-500';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Manrope Bold'), url('./Manrope-Medium.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'Manrope-600';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Manrope Bold'), url('./Manrope-SemiBold.ttf') format('ttf');
+}
+/* @font-face {
+    font-family: 'Manrope-700';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src:
+      local('Roboto Bold'),
+      url('./Manrope-Bold.ttf') format('ttf');
+  } */
