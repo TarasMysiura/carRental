@@ -1,12 +1,10 @@
 import { styled } from "styled-components";
 
 export const StyleForm = styled.div`
-  /* width: 300px; */
   .title {
-    font-family: 'Manrope-500', sans-serif;
+    font-family: "Manrope-500", sans-serif;
     color: #111111;
     font-size: 48px;
-    /* font-weight: 500; */
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -17,18 +15,19 @@ export const StyleForm = styled.div`
   .formStyle {
     display: flex;
     gap: 18px;
+    justify-content: center;
+    align-items: end;
   }
 
   .label {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    /* margin-bottom: 20px; */
   }
 
   .span {
     color: #8a8a89;
-    font-family: 'Manrope-500', sans-serif;
+    font-family: "Manrope-500", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -37,22 +36,43 @@ export const StyleForm = styled.div`
 
   .input {
     display: flex;
-    padding: 14px 89px 14px 18px;
+    padding: 14px 18px 14px 18px;
     justify-content: center;
     align-items: center;
+    height: 48px;
     gap: 32px;
     border-radius: 14px;
     background: #f7f7fb;
     color: #121417;
+    border: none;
     ::placeholder {
       color: #121417;
-      font-family: 'Manrope-500', sans-serif;
+      font-family: "Manrope-500", sans-serif;
       font-size: 18px;
       font-style: normal;
       font-weight: 500;
       line-height: 20px;
-      /* 111.111% */
     }
+  }
+
+  .inputCarBrand {
+    width: 224px;
+  }
+  .inputPrice {
+    width: 125px;
+  }
+  .inputPriceFrom {
+    width: 160px;
+    border-radius: 14px 0px 0px 14px;
+    border-right: 1px solid rgba(138, 138, 137, 0.2);
+  }
+  .inputPriceTo {
+    width: 160px;
+    border-radius: 0px 14px 14px 0px;
+  }
+
+  .inputWrapper {
+    display: flex;
   }
 
   .button {

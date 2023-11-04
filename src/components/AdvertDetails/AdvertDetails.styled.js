@@ -6,9 +6,10 @@ export const Card = styled.li`
   /* width: 274px; */
   display: flex;
   flex-direction: column;
-  gap: 24px;
-
+  gap: 12px;
+  max-height: 100%;
   list-style: none;
+  justify-content: space-between;
 `;
 
 export const NameCard = styled.div`
@@ -138,12 +139,12 @@ export const UlConditions = styled.ul`
 export const Condition = styled.li`
   display: flex;
   flex-direction: row;
-padding: 7px 14px;
-justify-content: center;
-align-items: center;
-gap: 8px;
-border-radius: 35px;
-background: #F9F9F9;
+  padding: 7px 14px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 35px;
+  background: #f9f9f9;
 `;
 export const ConditionText = styled.p`
   color: #363535;
@@ -164,13 +165,12 @@ export const Button = styled.button`
   display: inline-flex;
   width: 168px;
   height: 44px;
-padding: 12px 50px;
-justify-content: center;
-align-items: center;
-border-radius: 12px;
-background: #3470FF;
+  padding: 12px 50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: #3470ff;
 
-  
   font-family: "Manrope-600", sans-serif;
 
   color: #ffffff;

@@ -62,7 +62,7 @@ export const SearchForm = () => {
             <span className="span">Car brand</span>
             <Field
               as="select"
-              className="input"
+              className="input inputCarBrand"
               name="carBrand"
               type="text"
               autoComplete="true"
@@ -87,7 +87,7 @@ export const SearchForm = () => {
           <label className="label">
             <span className="span">Price/ 1 hour</span>
             <Field
-              className="input"
+              className="input inputPrice"
               type="text"
               name="price"
               autoComplete="true"
@@ -95,28 +95,30 @@ export const SearchForm = () => {
             />
             <FormError name="price" />
           </label>
-          <label className="label">
+         <div className="inputWrapper">
+         <label className="label">
             <span className="span">Name</span>
             <Field
-              className="input"
+              className="input inputPriceFrom"
               type="text"
               name="priceFrom"
               autoComplete="true"
-              placeholder="Enter the text"
+              placeholder="From"
             />
             <FormError name="priceFrom" />
           </label>
           <label className="label">
             <span className="span">Number</span>
             <Field
-              className="input"
+              className="input inputPriceTo"
               type="text"
               name="priceTo"
               autoComplete="true"
-              placeholder="Enter the text"
+              placeholder="To"
             />
             <FormError name="priceTo" />
           </label>
+         </div>
 
           <button type="submit" className="button">
             Search
