@@ -6,14 +6,14 @@ export const GlobalStyles = createGlobalStyle`
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Manrope Bold'), url('../../../assets/fonts/Manrope-Regular.ttf') format('ttf');
+  src: local('Manrope Regular'), url('../../../assets/fonts/Manrope-Regular.ttf') format('ttf');
 }
 @font-face {
   font-family: 'Manrope-500';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: local('Manrope Bold'), url('../../../assets/fonts/Manrope-Medium.ttf') format('ttf');
+  src: local('Manrope Medium'), url('../../../assets/fonts/Manrope-Medium.ttf') format('ttf');
 }
 @font-face {
   font-family: 'Manrope-600';
@@ -22,7 +22,21 @@ export const GlobalStyles = createGlobalStyle`
   font-display: swap;
   src: local('Manrope Bold'), url('../../../assets/fonts/Manrope-SemiBold.ttf') format('ttf');
 }
-  
+
+@font-face {
+  font-family: 'Montserrat-400';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Regular'), url('../../../assets/fonts/Montserrat-Regular.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'Montserrat-600';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Montserrat Bold'), url('../../../assets/fonts/Montserrat-Bold.ttf') format('ttf');
+}
   
   ${'' /* @font-face {
     font-family: 'InterRegular';

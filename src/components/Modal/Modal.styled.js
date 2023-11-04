@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyleModal = styled.div`
+box-sizing: border-box;
   border-radius: 8px;
   border: 1px solid rgba(220, 227, 229, 0.8);
 
@@ -25,7 +26,7 @@ export const StyleModal = styled.div`
 
     border-radius: 24px;
     background: #fff;
-    padding: 15px 35px;
+    padding: 40px;
   }
   .modal_tittle {
     position: absolute;
