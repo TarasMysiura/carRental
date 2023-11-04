@@ -1,8 +1,8 @@
 import { Advert } from "components/Advert/Advert";
 import React from "react";
 import { Ul } from "./AdvertList.styled";
-import { useSelector } from "react-redux";
-import { getFilterValue } from "redux/filterSlice";
+// import { useSelector } from "react-redux";
+// import { getFilterValue } from "redux/filterSlice";
 // import { getAdverds } from 'redux/adverdsSlice';
 
 export const AdvertList = ({ adverts }) => {

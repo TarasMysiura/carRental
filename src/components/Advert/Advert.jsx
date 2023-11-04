@@ -1,37 +1,30 @@
 import React from "react";
 import {
-  Button,
   Card,
   DetailsCard,
   Heart,
   Img,
   NameCard,
-  NumberSpan,
   Span,
 } from "./Advert.styled";
-import PropTypes from "prop-types";
-import { useDispatch } from "react-redux";
+// import PropTypes from "prop-types";
+// import { useDispatch } from "react-redux";
 import { SvgIconsSelector } from "components/Icon/SvgIconsSelect";
 import BtnLearnMore from "components/BtnLearnMore/BtnLearnMore";
 
 export const Advert = ({advert}) => {
 
 
-const {id,
+const {
   year,
   make,
   model,
   type,
   img,
-  description,
-  fuelConsumption,
-  engineSize,
   accessories,
-  functionalities,
   rentalPrice,
   rentalCompany,
   address,
-  rentalConditions,
   mileage} = advert;
 
   const country = address.split(", ")[address.split(", ").length - 1];

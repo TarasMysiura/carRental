@@ -27,7 +27,7 @@ export const NameCard = styled.div`
 `;
 export const Img = styled.img`
   box-sizing: border-box;
-  max-height: 264px;
+  max-height: 250px;
   background: #f3f3f2;
   border-radius: 24px;
 `;

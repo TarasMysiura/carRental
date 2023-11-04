@@ -37,7 +37,6 @@ const AdvertDetails = ({ advert }) => {
     accessories,
     functionalities,
     rentalPrice,
-    rentalCompany,
     address,
     rentalConditions,
     mileage,
