@@ -1,16 +1,15 @@
 import { styled } from "styled-components";
 
-export const Li = styled.li`
-  /* position: relative;
-  display: flex;
-  gap: 10px; */
-`;
 export const Card = styled.li`
+  position: relative;
   width: 274px;
-  /* position: relative; */
-  /* display: flex; */
-  /* gap: 10px; */
+
   list-style: none;
+`;
+export const Heart = styled.button`
+  position: absolute;
+  right: 14px;
+  top: 14px;
 `;
 
 export const Img = styled.img`
@@ -25,9 +24,8 @@ export const NameCard = styled.div`
 
   font-family: "Manrope-500", sans-serif;
   font-size: 16px;
-  /* font-style: normal;
-  font-weight: 500; */
-  line-height: 24px; /* 150% */
+
+  line-height: 1.5;
   display: flex;
   justify-content: space-between;
 `;
@@ -41,9 +39,7 @@ export const DetailsCard = styled.div`
 
   font-family: "Manrope-400", sans-serif;
   font-size: 12px;
-  /* font-style: normal; */
-  /* font-weight: 400; */
-  line-height: 18px; /* 150% */
+  line-height: 1.5;
   display: flex;
   flex-wrap: wrap;
 `;

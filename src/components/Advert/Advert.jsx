@@ -3,6 +3,7 @@ import {
   Button,
   Card,
   DetailsCard,
+  Heart,
   Img,
   Li,
   NameCard,
@@ -12,6 +13,7 @@ import {
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 import { removeContact } from "redux/advertsSlice";
+import { SvgIconsSelector } from "components/Icon/SvgIconsSelect";
 
 export const Advert = ({
   id,
@@ -33,8 +35,8 @@ export const Advert = ({
 
   // const dispatch = useDispatch();
 
-  // const onRemoveAdvert = contactId => {
-  //   dispatch(removeContact(contactId));
+  // const onFavorite = () => {
+  //   dispatch(addFavorite());
   // };
 
   return (
@@ -60,17 +62,24 @@ export const Advert = ({
           <p>{accessory}</p>
         </DetailsCard>
       </DetailsCard>
+      <Heart>
+        <SvgIconsSelector
+          id="heart"
+          className="heart"
+          // onClick={onFavorite}
+        />
+      </Heart>
       <Button>Learn more</Button>
     </Card>
   );
 };
 
-Advert.propTypes = {
-  filteredContacts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
-    })
-  ),
-};
+// Advert.propTypes = {
+//   filteredContacts: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       id: PropTypes.string.isRequired,
+//       name: PropTypes.string.isRequired,
+//       number: PropTypes.string.isRequired,
+//     })
+//   ),
+// };

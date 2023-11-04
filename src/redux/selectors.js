@@ -6,6 +6,8 @@ export const selectIsLoading = (state) => state.adverts.isLoading;
 
 export const selectError = (state) => state.adverts.error;
 
+export const selectCurrentPage = (state) => state.adverts.error;
+
 // export const selectDateCalendar = (state) => state.dateCalendar.dateCalendar;
 
 // export const selectVisibleTasks = createSelector(

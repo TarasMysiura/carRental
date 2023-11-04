@@ -14,6 +14,7 @@ const handleRejected = (state, action) => {
 
 const advertsInitialState = {
   items: [],
+  // currentPage: 1,
   isLoading: false,
   error: null,
 };
