@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://github.com/TarasMysiura/carRental",
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
     "@reduxjs/toolkit": "^1.9.7",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",

@@ -5,30 +5,35 @@ import {
   DetailsCard,
   Heart,
   Img,
-  Li,
   NameCard,
   NumberSpan,
   Span,
 } from "./Advert.styled";
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
-import { removeContact } from "redux/advertsSlice";
 import { SvgIconsSelector } from "components/Icon/SvgIconsSelect";
+import BtnLearnMore from "components/BtnLearnMore/BtnLearnMore";
 
-export const Advert = ({
-  id,
-  img,
-  alt,
+export const Advert = ({advert}) => {
+
+
+const {id,
   year,
   make,
-  mileage,
-  type,
   model,
-  address,
+  type,
+  img,
+  description,
+  fuelConsumption,
+  engineSize,
+  accessories,
+  functionalities,
   rentalPrice,
   rentalCompany,
-  accessories,
-}) => {
+  address,
+  rentalConditions,
+  mileage} = advert;
+
   const country = address.split(", ")[address.split(", ").length - 1];
   const accessory = accessories[accessories.length - 1];
   const city = address.split(", ")[address.split(", ").length - 2];
@@ -65,11 +70,11 @@ export const Advert = ({
       <Heart>
         <SvgIconsSelector
           id="heart"
-          className="heart"
+          // className="heart"
           // onClick={onFavorite}
         />
       </Heart>
-      <Button>Learn more</Button>
+      <BtnLearnMore advert={advert} />
     </Card>
   );
 };
