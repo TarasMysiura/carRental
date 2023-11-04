@@ -124,7 +124,7 @@ const AdvertDetails = ({ advert }) => {
         </UlConditions>
       </div>
 
-      <Button>Rental car</Button>
+      <Button type="button"><a href="tel:+380730000000">Rental car</a></Button>
     </Card>
   );
 };
