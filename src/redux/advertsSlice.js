@@ -15,7 +15,7 @@ const advertsInitialState = {
   // currentPage: 1,
   isLoading: false,
   error: null,
-  favorites: [1, 2, 5],
+  favorites: [],
 };
 
 const advertsSlice = createSlice({

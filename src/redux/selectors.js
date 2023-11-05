@@ -1,4 +1,4 @@
-// import { createSelector } from '@reduxjs/toolkit';
+import { createSelector } from "@reduxjs/toolkit";
 
 export const selectAdverts = (state) => state.adverts.items;
 
@@ -7,18 +7,28 @@ export const selectIsLoading = (state) => state.adverts.isLoading;
 export const selectError = (state) => state.adverts.error;
 
 export const selectCurrentPage = (state) => state.adverts.error;
+
 export const selectFavorites = (state) => state.adverts.favorites;
 
-// export const selectDateCalendar = (state) => state.dateCalendar.dateCalendar;
-
-// export const selectVisibleTasks = createSelector(
-//   [selectTasks, selectDateCalendar],
-//   (tasks, date) => {
-//     return tasks?.filter(
-//       (task) => task.date === date.toISOString().slice(0, 10),
-//     );
-//   },
+// export const selectFavoriteAdverts = createSelector(
+//   [selectAdverts, selectFavorites],
+//   (adverts, value) => {
+//     return adverts?.filter((advert) => {
+//       return advert.make.toLowerCase().includes(value.toLowerCase()) ?? [];
+//     });
+//   }
 // );
 
+export const selectAdvertsFilter = state => state.filterContacts.value;
 
-export const selectAdvert = (state) => state.advert.items;
+export const selectFilteredContacts = createSelector(
+  [
+    selectAdverts, 
+    selectAdvertsFilter, 
+  ],
+  (items, value) => {
+    return items?.filter(advert => {
+      return advert.name.toLowerCase().includes(value.toLowerCase()) ?? [];
+    });
+  }
+);
