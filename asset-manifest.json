@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/carRental/static/css/main.a166b581.css",
-    "main.js": "/carRental/static/js/main.aa10cd1f.js",
+    "main.js": "/carRental/static/js/main.269824b2.js",
     "static/media/Montserrat-Bold.ttf": "/carRental/static/media/Montserrat-Bold.50f0257aa1e905f4bfaf.ttf",
     "static/media/Montserrat-Regular.ttf": "/carRental/static/media/Montserrat-Regular.24785cc015b27a3e964b.ttf",
     "static/media/Manrope-SemiBold.ttf": "/carRental/static/media/Manrope-SemiBold.33d2f89e0616126658af.ttf",
@@ -9,10 +9,10 @@
     "static/media/Manrope-Regular.ttf": "/carRental/static/media/Manrope-Regular.b1d694f660569a9a9ee6.ttf",
     "index.html": "/carRental/index.html",
     "main.a166b581.css.map": "/carRental/static/css/main.a166b581.css.map",
-    "main.aa10cd1f.js.map": "/carRental/static/js/main.aa10cd1f.js.map"
+    "main.269824b2.js.map": "/carRental/static/js/main.269824b2.js.map"
   },
   "entrypoints": [
     "static/css/main.a166b581.css",
-    "static/js/main.aa10cd1f.js"
+    "static/js/main.269824b2.js"
   ]
 }
