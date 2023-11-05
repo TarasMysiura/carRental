@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { Card, DetailsCard, Heart, Img, NameCard, Span } from "./Advert.styled";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import { SvgIconsSelector } from "components/Icon/SvgIconsSelect";
 import BtnLearnMore from "components/BtnLearnMore/BtnLearnMore";
-// import { useDispatch, useSelector } from "react-redux";
-// import { selectFavorites } from "redux/selectors";
 
-export const Advert = ({ advert, addFavorite }) => {
+export const Advert = ({
+  advert,
+  addFavorite,
+  advertFavorite,
+  setAdvertFavorite,
+}) => {
   const {
     year,
     make,
@@ -19,20 +22,20 @@ export const Advert = ({ advert, addFavorite }) => {
     address,
     mileage,
   } = advert;
-  // let favorites = useSelector(selectFavorites)
 
-  const [isFavorite] = useState(false);
   const country = address.split(", ")[address.split(", ").length - 1];
   const accessory = accessories[accessories.length - 1];
   const city = address.split(", ")[address.split(", ").length - 2];
 
-  // let favorites = useSelector(selectFavorites);
-  // const dispatch = useDispatch();
-  // const [favorites, setFavorites]=useState([])
+  const handle = () => {
+    if (advertFavorite) {
+      setAdvertFavorite(false);
+    } else {
+      setAdvertFavorite(true);
+    }
+    addFavorite(advert);
+  };
 
-  // if (!favorites.some((favorite) => favorite === id)) {
-  //   setIsFavorite(true);
-  // }
   return (
     <Card>
       <Img src={img} alt={model} />
@@ -56,8 +59,8 @@ export const Advert = ({ advert, addFavorite }) => {
           <p>{accessory}</p>
         </DetailsCard>
       </DetailsCard>
-      <Heart type="button" onClick={() => addFavorite(advert)}>
-        {isFavorite ? (
+      <Heart type="button" onClick={handle}>
+        {advertFavorite ? (
           <SvgIconsSelector id="heart" />
         ) : (
           <SvgIconsSelector id="heartSelected" />
@@ -68,12 +71,21 @@ export const Advert = ({ advert, addFavorite }) => {
   );
 };
 
-// Advert.propTypes = {
-//   filteredContacts: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.string.isRequired,
-//       name: PropTypes.string.isRequired,
-//       number: PropTypes.string.isRequired,
-//     })
-//   ),
-// };
+Advert.propTypes = {
+  advert: PropTypes.shape({
+      year: PropTypes.number,
+      make: PropTypes.string,
+      model: PropTypes.string,
+      type: PropTypes.string,
+      img: PropTypes.string,
+      // accessories: PropTypes.arrayOf(),
+      rentalPrice: PropTypes.string,
+      rentalCompany: PropTypes.string,
+      address: PropTypes.string,
+      mileage: PropTypes.number,
+    }
+  ),
+  addFavorite: PropTypes.func,
+  advertFavorite: PropTypes.bool,
+  setAdvertFavorite: PropTypes.func,
+};

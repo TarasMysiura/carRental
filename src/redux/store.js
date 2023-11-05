@@ -11,11 +11,13 @@ import {
 } from "redux-persist";
 import persistStore from "redux-persist/es/persistStore";
 import { filterSliceReducer } from "./filterSlice";
+import { favoriteSliceReducer } from "./favoriteSlice";
 
 export const store = configureStore({
   reducer: {
     adverts: advertsReducer,
     filterAdverts: filterSliceReducer,
+    favoriteAdverts: favoriteSliceReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

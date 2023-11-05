@@ -8,16 +8,16 @@ export const selectError = (state) => state.adverts.error;
 
 export const selectCurrentPage = (state) => state.adverts.error;
 
-export const selectFavorites = (state) => state.adverts.favorites;
+export const selectFavorites = (state) => state.favoriteAdverts.items;
 
-// export const selectFavoriteAdverts = createSelector(
-//   [selectAdverts, selectFavorites],
-//   (adverts, value) => {
-//     return adverts?.filter((advert) => {
-//       return advert.make.toLowerCase().includes(value.toLowerCase()) ?? [];
-//     });
-//   }
-// );
+export const selectFavoriteAdverts = createSelector(
+  [selectAdverts, selectFavorites],
+  (adverts, value) => {
+    return adverts?.filter((advert) => {
+      return advert.make.toLowerCase().includes(value.toLowerCase()) ?? [];
+    });
+  }
+);
 
 export const selectAdvertsFilter = (state) => state.filterAdverts.value;
 

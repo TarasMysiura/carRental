@@ -11,9 +11,7 @@ import { BrowserRouter } from "react-router-dom";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
     {/* <PersistGate loading={<p>loading...</p>} persistor={persistor}> */}
-    <BrowserRouter
-    basename="/carRental"
-    >
+    <BrowserRouter basename="/carRental">
       <GlobalStyles />
       <App />
     </BrowserRouter>
