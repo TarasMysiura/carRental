@@ -5,16 +5,31 @@ export const Container = styled.div`
   width: 1440px;
 
   background-color: white;
-  padding: 128px;
-  /* border: 1px solid black; */
-  /* border-radius: 12px; */
+  padding: 28px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   justify-content: center;
-  /* margin-bottom: 20px; */
   margin: auto;
 `;
+export const Navigate = styled.nav`
+box-sizing: border-box;
+  width: 300px;
+  display: flex;
+  gap: 20px;
+  font-size: 28px;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+
+
+`
+
+
+
+
 export const Button = styled.button`
   
 `;

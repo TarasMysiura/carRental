@@ -1,46 +1,35 @@
-import { SearchForm } from "./SearchForm/SearchForm";
-import { AdvertList } from "./AdvertList/AdvertList";
-import { Container } from "./App.styled";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useState } from "react";
-import { fetchAdverts } from "redux/advertsOperations";
-import { selectAdverts, selectError, selectIsLoading } from "redux/selectors";
-import { BtnOnLoadMore } from "./BtnOnLoadMore/BtnOnLoadMore";
 import { Loader } from "./Loader/Loader";
+import { NavLink, Route, Routes, useLocation } from "react-router-dom";
+import { Suspense, lazy } from "react";
+import { ToastContainer } from "react-toastify";
+import { Container, Navigate } from "./App.styled";
+
+const HomePage = lazy(() => import("pages/HomePage"));
+const CatalogPage = lazy(() => import("pages/CatalogPage"));
 
 export const App = () => {
-  const isLoading = useSelector(selectIsLoading);
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const advertsData = useSelector(selectAdverts);
-
-  const dispatch = useDispatch();
-  const error = useSelector(selectError);
-
-  const LoadMore = () => {
-    setCurrentPage(currentPage + 1);
-  };
-  useEffect(() => {
-    const fetchData = async () => {
-      dispatch(fetchAdverts(currentPage));
-    };
-    fetchData();
-    if (error) toast.error(error);
-  }, [dispatch, error, currentPage]);
-
   return (
     <Container>
-      <SearchForm />
-
-      <AdvertList adverts={advertsData} />
-      {!isLoading && advertsData.length >= 12 && (
-        <BtnOnLoadMore onLoadMore={LoadMore} />
-      )}
-
-      <ToastContainer />
-      {isLoading && <Loader />}
+      <header>
+        <Navigate>
+          <NavLink to="/">
+            <h2>Home</h2>{" "}
+          </NavLink>
+          <NavLink to="/catalog">
+            <h2>Catalog</h2>
+          </NavLink>
+        </Navigate>
+      </header>
+      <main>
+        <Suspense fallback={<Loader />}>
+          <Routes>
+            <Route path="/" index element={<HomePage />} />
+            <Route path="/catalog" element={<CatalogPage />} />
+          </Routes>
+        </Suspense>
+        <ToastContainer />
+      </main>
+      <footer></footer>
     </Container>
   );
 };

@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { Card, DetailsCard, Heart, Img, NameCard, Span } from "./Advert.styled";
 // import PropTypes from "prop-types";
-// import { useDispatch } from "react-redux";
 import { SvgIconsSelector } from "components/Icon/SvgIconsSelect";
 import BtnLearnMore from "components/BtnLearnMore/BtnLearnMore";
-// import { useDispatch } from "react-redux";
 
-export const Advert = ({ advert }) => {
-  const {
+export const Advert = ({ advert, addFavorite }) => {
+  const {id,
     year,
     make,
     model,
@@ -19,18 +17,12 @@ export const Advert = ({ advert }) => {
     address,
     mileage,
   } = advert;
-  const [isFavorite, setIsFavorite] = useState(false);
+  const [isFavorite] = useState(false);
   const country = address.split(", ")[address.split(", ").length - 1];
   const accessory = accessories[accessories.length - 1];
   const city = address.split(", ")[address.split(", ").length - 2];
 
-  // const dispatch = useDispatch();
-
-  const onFavorite = () => {
-    // dispatch(addFavorite());
-    setIsFavorite(true);
-  };
-
+  
   return (
     <Card>
       <Img src={img} alt={model} />
@@ -54,11 +46,11 @@ export const Advert = ({ advert }) => {
           <p>{accessory}</p>
         </DetailsCard>
       </DetailsCard>
-      <Heart>
+      <Heart type="button" onClick={() => addFavorite(id)}>
         {isFavorite ? (
-          <SvgIconsSelector id="heart" onClick={onFavorite} />
+          <SvgIconsSelector id="heart"  />
         ) : (
-          <SvgIconsSelector id="heartSelected" onClick={onFavorite} />
+          <SvgIconsSelector id="heartSelected" />
         )}
       </Heart>
       <BtnLearnMore advert={advert} />
