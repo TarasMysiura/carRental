@@ -2,7 +2,7 @@
   "name": "carRental",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/TarasMysiura/carRental",
+  "homepage": "https://tarasmysiura.github.io/carRental",
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@reduxjs/toolkit": "^1.9.7",
