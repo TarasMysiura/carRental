@@ -12,6 +12,7 @@ import {
   selectAdverts,
   selectError,
   selectFavorites,
+  selectFilteredAdverts,
   selectIsLoading,
 } from "redux/selectors";
 
@@ -25,18 +26,16 @@ const CatalogPage = () => {
   const advertsData = useSelector(selectAdverts);
   const favorites = useSelector(selectFavorites);
   const error = useSelector(selectError);
+  const filteredAdverts = useSelector(selectFilteredAdverts);
 
   const LoadMore = () => {
     setCurrentPage(currentPage + 1);
   };
 
-  console.log("favorites: ", favorites);
   const addFavorite = (advert) => {
     if (!favorites.some((favorite) => favorite === advert.id)) {
-      console.log("YES");
 
       dispatch([...favorites, advert.id]);
-      console.log("favorites: ", favorites);
     } else {
       const index = favorites.indexOf(advert.id);
       favorites.splice(index, 1);
@@ -55,7 +54,7 @@ const CatalogPage = () => {
       <SearchForm />
 
       <AdvertList
-        adverts={advertsData}
+        adverts={filteredAdverts}
         location={location}
         addFavorite={addFavorite}
       />

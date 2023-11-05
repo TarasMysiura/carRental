@@ -3,56 +3,38 @@ import React from "react";
 import { Formik, Form, Field } from "formik";
 import * as yup from "yup";
 
-// import PropTypes from "prop-types";
 import { FormError } from "components/FormError/FormError";
-// import { useDispatch, useSelector } from "react-redux";
-// import { toast } from "react-toastify";
-// import { nanoid } from "nanoid";
-// import { addContact } from "redux/contactsSlice";
-// import { toastConfig } from "redux/data";
+
 import { StyleForm } from "./SearchForm.styled";
+import { useDispatch } from "react-redux";
+import { setFilter } from "redux/filterSlice";
 
 const schema = yup.object().shape({
-  name: yup.string("no valid name").required("Required"),
-  number: yup.number("no valid name").required("Required").positive().integer(),
+  make: yup.string(),
+  price: yup.string(),
+  priceFrom: yup.string(),
+  priceTo: yup.string(),
 });
-// import { dataCarBrend } from "redux/data";
 
 export const SearchForm = () => {
-  // const contacts = useSelector((state) => state.contacts.contacts);
+  const dispatch = useDispatch();
 
-  // const dispatch = useDispatch();
-
-  // const onAddContact = values => {
-  //   const isInContacts = contacts.some(
-  //     ({ name }) => name.toLowerCase() === values.name.toLowerCase()
-  //   );
-
-  //   if (isInContacts) {
-  //     toast.error(`${values.name} is already in contacts`, toastConfig);
-  //     return;
-  //   }
-
-  //   const finalContact = {
-  //     id: nanoid(5),
-  //     ...values,
-  //   };
-
-  //   dispatch(addContact(finalContact));
-  // };
+  const onChangeFilter = ({make}) => {
+    dispatch(setFilter(make));
+  };
 
   const handleSubmit = (values, { resetForm }) => {
-    // onAddContact(values);
-    resetForm();
+    onChangeFilter(values);
   };
 
   return (
     <StyleForm>
-      {/* <h2 className={css.title}>{title}</h2> */}
       <Formik
         initialValues={{
-          name: "",
-          number: "",
+          make: "",
+          price: "",
+          priceFrom: "",
+          priceTo: "",
         }}
         onSubmit={handleSubmit}
         validationSchema={schema}
@@ -63,11 +45,12 @@ export const SearchForm = () => {
             <Field
               as="select"
               className="input inputCarBrand"
-              name="carBrand"
+              name="make"
               type="text"
               autoComplete="true"
               placeholder="Enter the text"
             >
+              <option value=""> Enter the text </option>
               <option value="Buick"> Buick </option>
               <option value="Volvo"> Volvo </option>
               <option value="HUMMER"> HUMMER </option>
@@ -82,7 +65,7 @@ export const SearchForm = () => {
               <option value="Mercedes-Benz"> Mercedes-Benz </option>
             </Field>
 
-            <FormError name="carBrand" />
+            <FormError name="make" />
           </label>
           <label className="label">
             <span className="span">Price/ 1 hour</span>
@@ -95,30 +78,29 @@ export const SearchForm = () => {
             />
             <FormError name="price" />
           </label>
-         <div className="inputWrapper">
-         <label className="label">
-            <span className="span">Name</span>
-            <Field
-              className="input inputPriceFrom"
-              type="text"
-              name="priceFrom"
-              autoComplete="true"
-              placeholder="From"
-            />
-            <FormError name="priceFrom" />
-          </label>
-          <label className="label">
-            <span className="span">Number</span>
-            <Field
-              className="input inputPriceTo"
-              type="text"
-              name="priceTo"
-              autoComplete="true"
-              placeholder="To"
-            />
-            <FormError name="priceTo" />
-          </label>
-         </div>
+          <div className="inputWrapper">
+            <label className="label">
+              <span className="span">Сar mileage / km</span>
+              <Field
+                className="input inputPriceFrom"
+                type="text"
+                name="priceFrom"
+                autoComplete="true"
+                placeholder="From"
+              />
+              <FormError name="priceFrom" />
+            </label>
+            <label className="label">
+              <Field
+                className="input inputPriceTo"
+                type="text"
+                name="priceTo"
+                autoComplete="true"
+                placeholder="To"
+              />
+              <FormError name="priceTo" />
+            </label>
+          </div>
 
           <button type="submit" className="button">
             Search
@@ -129,6 +111,4 @@ export const SearchForm = () => {
   );
 };
 
-// SearchForm.propTypes = {
-//   title: PropTypes.string.isRequired,
-// };
+

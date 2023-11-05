@@ -22,6 +22,7 @@ export const StyleForm = styled.div`
   .label {
     display: flex;
     flex-direction: column;
+    justify-content: end;
     gap: 8px;
   }
 

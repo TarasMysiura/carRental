@@ -10,10 +10,12 @@ import {
   REHYDRATE,
 } from "redux-persist";
 import persistStore from "redux-persist/es/persistStore";
+import { filterSliceReducer } from "./filterSlice";
 
 export const store = configureStore({
   reducer: {
     adverts: advertsReducer,
+    filterAdverts: filterSliceReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

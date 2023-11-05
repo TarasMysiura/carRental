@@ -19,16 +19,13 @@ export const selectFavorites = (state) => state.adverts.favorites;
 //   }
 // );
 
-export const selectAdvertsFilter = state => state.filterContacts.value;
+export const selectAdvertsFilter = (state) => state.filterAdverts.value;
 
-export const selectFilteredContacts = createSelector(
-  [
-    selectAdverts, 
-    selectAdvertsFilter, 
-  ],
-  (items, value) => {
-    return items?.filter(advert => {
-      return advert.name.toLowerCase().includes(value.toLowerCase()) ?? [];
+export const selectFilteredAdverts = createSelector(
+  [selectAdverts, selectAdvertsFilter],
+  (items, values) => {
+    return items?.filter((advert) => {
+      return advert.make.includes(values) ?? [];
     });
   }
 );

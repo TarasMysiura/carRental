@@ -31,7 +31,6 @@ const advertsSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         state.items = action.payload;
-        // state.favorites = action.payload;
       })
       .addCase(fetchAdverts.rejected, (state, action) => {
         handleRejected(state, action);
