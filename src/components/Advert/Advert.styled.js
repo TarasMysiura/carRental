@@ -22,7 +22,7 @@ export const Img = styled.img`
 export const NameCard = styled.div`
   color: #121417;
 
-  font-family: "Manrope-500", sans-serif;
+  font-family: "ManropeMedium", sans-serif;
   font-size: 16px;
 
   line-height: 1.5;
@@ -37,7 +37,7 @@ export const Span = styled.span`
 export const DetailsCard = styled.div`
   color: rgba(18, 20, 23, 0.5);
 
-  font-family: "Manrope-400", sans-serif;
+  font-family: "ManropeRegular", sans-serif;
   font-size: 12px;
   line-height: 1.5;
   display: flex;
@@ -55,7 +55,8 @@ export const Button = styled.button`
 
   border-radius: 12px;
   background: #3470ff;
-  font-family: "Manrope-600", sans-serif;
+  font-family: "ManropeSemiBold", sans-serif;
+  font-size: 14px;
 
   color: #ffffff;
   margin-top: 28px;

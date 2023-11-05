@@ -5,7 +5,7 @@ export const ButtonLoadMore = styled.button`
   cursor: pointer;
   display: block;
   color: #3470ff;
-  font-family: "Manrope-500", sans-serif;
+  font-family: "ManropeMedium", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   text-decoration-line: underline;

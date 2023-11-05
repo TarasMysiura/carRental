@@ -17,7 +17,7 @@ export const NameCard = styled.div`
   color: #121417;
   /* height: 314px; */
 
-  font-family: "Manrope-500", sans-serif;
+  font-family: "ManropeMedium", sans-serif;
   font-size: 16px;
 
   line-height: 1.5;
@@ -40,7 +40,7 @@ export const Span = styled.span`
 export const DetailsCard = styled.div`
   color: rgba(18, 20, 23, 0.5);
 
-  font-family: "Manrope-400", sans-serif;
+  font-family: "ManropeRegular", sans-serif;
   font-size: 12px;
   line-height: 1.5;
   display: flex;
@@ -50,14 +50,14 @@ export const AdventDescription = styled.p`
   margin-top: 14px;
   /* margin-bottom: 8px; */
   color: #121417;
-  font-family: "Manrope-400", sans-serif;
+  font-family: "ManropeRegular", sans-serif;
   font-size: 14px;
   line-height: 1.43;
 `;
 export const AdventTitle = styled.p`
   margin-bottom: 8px;
   color: #121417;
-  font-family: "Manrope-400", sans-serif;
+  font-family: "ManropeRegular", sans-serif;
   font-size: 14px;
   line-height: 1.43;
 `;
@@ -80,7 +80,7 @@ export const AccessoryName = styled.p`
   flex-wrap: wrap;
   color: rgba(18, 20, 23, 0.5);
 
-  font-family: "Manrope-400", sans-serif;
+  font-family: "ManropeRegular", sans-serif;
   font-size: 12px;
   line-height: 1.5;
   display: flex;
@@ -92,7 +92,7 @@ export const AccessorySpan = styled.span`
   flex-wrap: wrap;
   color: rgba(18, 20, 23, 0.5);
 
-  font-family: "Manrope-400", sans-serif;
+  font-family: "ManropeRegular", sans-serif;
   font-size: 12px;
   line-height: 1.5;
   display: flex;
@@ -111,7 +111,7 @@ export const FunctionalityName = styled.p`
   flex-wrap: wrap;
   color: rgba(18, 20, 23, 0.5);
 
-  font-family: "Manrope-400", sans-serif;
+  font-family: "ManropeRegular", sans-serif;
   font-size: 12px;
   line-height: 1.5;
   display: flex;
@@ -123,7 +123,7 @@ export const FunctionalitySpan = styled.span`
   flex-wrap: wrap;
   color: rgba(18, 20, 23, 0.5);
 
-  font-family: "Manrope-400", sans-serif;
+  font-family: "ManropeRegular", sans-serif;
   font-size: 12px;
   line-height: 1.5;
   display: flex;
@@ -148,17 +148,17 @@ export const Condition = styled.li`
 `;
 export const ConditionText = styled.p`
   color: #363535;
-  font-family: "Montserrat-400", sans-serif;
+  font-family: "MontserratRegular", sans-serif;
   font-size: 12px;
   line-height: 1.5;
   letter-spacing: -0.24px;
 `;
 export const ConditionSpan = styled.p`
   color: #3470ff;
-  font-family: "Montserrat-600", sans-serif;
+  font-family: "MontserratSemiBold", sans-serif;
   font-size: 12px;
   line-height: 1.5;
-  font-weight: 600;
+
   letter-spacing: -0.24px;
 `;
 export const Button = styled.button`
@@ -171,7 +171,7 @@ export const Button = styled.button`
   border-radius: 12px;
   background: #3470ff;
 
-  font-family: "Manrope-600", sans-serif;
+  font-family: "ManropeSemiBold", sans-serif;
 
   color: #ffffff;
 `;

@@ -6,7 +6,7 @@ export const GlobalStyles = createGlobalStyle`
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Manrope Regular'), url('/assets/fonts/Manrope-Regular.ttf') format('ttf');
+  src: local('Manrope Regular'), url('../../assets/fontsManrope-Regular.ttf') format('ttf');
 }
 @font-face {
   font-family: 'Manrope-500';

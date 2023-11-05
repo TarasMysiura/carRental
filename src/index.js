@@ -5,7 +5,7 @@ import "./index.css";
 import { Provider } from "react-redux";
 // import { PersistGate } from "redux-persist/integration/react";
 import {  store } from "redux/store.js";
-import { GlobalStyles } from "components/Style/GlobalStyle";
+import { GlobalStyles } from "./style/GlobalStyle.js";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>

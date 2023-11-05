@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const StyleForm = styled.div`
   .title {
-    font-family: "Manrope-500", sans-serif;
+    font-family: "ManropeMedium", sans-serif;
     color: #111111;
     font-size: 48px;
     margin-left: auto;
@@ -27,7 +27,7 @@ export const StyleForm = styled.div`
 
   .span {
     color: #8a8a89;
-    font-family: "Manrope-500", sans-serif;
+    font-family: "ManropeMedium", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -47,7 +47,7 @@ export const StyleForm = styled.div`
     border: none;
     ::placeholder {
       color: #121417;
-      font-family: "Manrope-500", sans-serif;
+      font-family: "ManropeMedium", sans-serif;
       font-size: 18px;
       font-style: normal;
       font-weight: 500;
@@ -83,6 +83,8 @@ export const StyleForm = styled.div`
     padding: 14px 44px;
     justify-content: center;
     align-items: center;
+      font-family: "ManropeSemiBold", sans-serif;
+      font-size: 14px;
     flex-shrink: 0;
     border-radius: 12px;
     background: #3470ff;

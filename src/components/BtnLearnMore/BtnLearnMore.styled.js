@@ -11,7 +11,7 @@ export const Button = styled.button`
 
   border-radius: 12px;
   background: #3470ff;
-  font-family: "Manrope-600", sans-serif;
+  font-family: "ManropeSemiBold", sans-serif;
 
   color: #ffffff;
   margin-top: 28px;
