@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
     {/* <PersistGate loading={<p>loading...</p>} persistor={persistor}> */}
     <BrowserRouter
-    // basename="/carRental"
+    basename="/carRental"
     >
       <GlobalStyles />
       <App />
