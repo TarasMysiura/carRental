@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Card, DetailsCard, Heart, Img, NameCard, Span } from "./Advert.styled";
 import PropTypes from "prop-types";
 import { SvgIconsSelector } from "components/Icon/SvgIconsSelect";
