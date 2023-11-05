@@ -19,7 +19,7 @@ box-sizing: border-box;
 
   .modal_content {
     width: 541px;
-    height:100%;
+    /* height:100%; */
     flex-shrink: 0;
 
     position: relative;
