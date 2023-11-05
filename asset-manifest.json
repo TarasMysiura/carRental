@@ -1,13 +1,18 @@
 {
   "files": {
     "main.css": "/TarasMysiura/carRental/static/css/main.a166b581.css",
-    "main.js": "/TarasMysiura/carRental/static/js/main.b7b69cdb.js",
+    "main.js": "/TarasMysiura/carRental/static/js/main.90002fdf.js",
+    "static/media/Montserrat-Bold.ttf": "/TarasMysiura/carRental/static/media/Montserrat-Bold.50f0257aa1e905f4bfaf.ttf",
+    "static/media/Montserrat-Regular.ttf": "/TarasMysiura/carRental/static/media/Montserrat-Regular.24785cc015b27a3e964b.ttf",
+    "static/media/Manrope-SemiBold.ttf": "/TarasMysiura/carRental/static/media/Manrope-SemiBold.33d2f89e0616126658af.ttf",
+    "static/media/Manrope-Medium.ttf": "/TarasMysiura/carRental/static/media/Manrope-Medium.c1117ffc8855673d0172.ttf",
+    "static/media/Manrope-Regular.ttf": "/TarasMysiura/carRental/static/media/Manrope-Regular.b1d694f660569a9a9ee6.ttf",
     "index.html": "/TarasMysiura/carRental/index.html",
     "main.a166b581.css.map": "/TarasMysiura/carRental/static/css/main.a166b581.css.map",
-    "main.b7b69cdb.js.map": "/TarasMysiura/carRental/static/js/main.b7b69cdb.js.map"
+    "main.90002fdf.js.map": "/TarasMysiura/carRental/static/js/main.90002fdf.js.map"
   },
   "entrypoints": [
     "static/css/main.a166b581.css",
-    "static/js/main.b7b69cdb.js"
+    "static/js/main.90002fdf.js"
   ]
 }
