@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const Container = styled.div`
   box-sizing: border-box;
-  width: 1440px;
+  width: 1280px;
 
   background-color: white;
   padding: 28px;
@@ -10,8 +10,10 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 20px;
   justify-content: center;
+  align-items: center;
   margin: auto;
 `;
+
 export const Navigate = styled.nav`
 box-sizing: border-box;
   width: 300px;

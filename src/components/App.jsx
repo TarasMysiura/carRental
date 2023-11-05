@@ -1,5 +1,5 @@
 import { Loader } from "./Loader/Loader";
-import { NavLink, Route, Routes, useLocation } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import { ToastContainer } from "react-toastify";
 import { Container, Navigate } from "./App.styled";
