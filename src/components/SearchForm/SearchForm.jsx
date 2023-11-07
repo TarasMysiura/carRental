@@ -19,7 +19,7 @@ const schema = yup.object().shape({
 export const SearchForm = () => {
   const dispatch = useDispatch();
 
-  const onChangeFilter = ({make}) => {
+  const onChangeFilter = ({ make }) => {
     dispatch(setFilter(make));
   };
 
@@ -43,27 +43,29 @@ export const SearchForm = () => {
           <label className="label">
             <span className="span">Car brand</span>
             <Field
-              as="select"
+              // as="select"
               className="input inputCarBrand"
               name="make"
+              list="makes"
               type="text"
               autoComplete="true"
               placeholder="Enter the text"
-            >
-              <option value=""> Enter the text </option>
-              <option value="Buick"> Buick </option>
-              <option value="Volvo"> Volvo </option>
-              <option value="HUMMER"> HUMMER </option>
-              <option value="Subaru"> Subaru </option>
-              <option value="Mitsubishi"> Mitsubishi </option>
-              <option value="Nissan"> Nissan </option>
-              <option value="Lincoln"> Lincoln </option>
-              <option value="GMC"> GMC </option>
-              <option value="Hyundai"> Hyundai </option>
-              <option value="MINI"> MINI </option>
-              <option value="Bentley"> Bentley </option>
-              <option value="Mercedes-Benz"> Mercedes-Benz </option>
-            </Field>
+            ></Field>
+
+            <datalist id="makes" className="makesList">
+              <option value="Buick" />
+              <option value="Volvo" />
+              <option value="HUMMER" />
+              <option value="Subaru" />
+              <option value="Mitsubishi" />
+              <option value="Nissan" />
+              <option value="Lincoln" />
+              <option value="GMC" />
+              <option value="Hyundai" />
+              <option value="MINI" />
+              <option value="Bentley" />
+              <option value="Mercedes" />
+            </datalist>
 
             <FormError name="make" />
           </label>
@@ -110,5 +112,3 @@ export const SearchForm = () => {
     </StyleForm>
   );
 };
-
-

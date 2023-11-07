@@ -75,6 +75,22 @@ export const StyleForm = styled.div`
   .inputWrapper {
     display: flex;
   }
+  .makesList option{
+    display: inline-flex;
+    height: 272px;
+    font-size: 18px;
+    padding: 14px 8px 14px 18px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    /* gap: 112px; */
+    flex-shrink: 0;
+    border-radius: 14px;
+    border: 1px solid rgba(18, 20, 23, 0.05);
+
+    background: #fff;
+
+    box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.02);
+  }
 
   .button {
     box-sizing: border-box;
@@ -84,8 +100,8 @@ export const StyleForm = styled.div`
     padding: 14px 44px;
     justify-content: center;
     align-items: center;
-      font-family: "ManropeSemiBold", sans-serif;
-      font-size: 14px;
+    font-family: "ManropeSemiBold", sans-serif;
+    font-size: 14px;
     flex-shrink: 0;
     border-radius: 12px;
     background: #3470ff;
