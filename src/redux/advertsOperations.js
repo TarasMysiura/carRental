@@ -6,7 +6,7 @@ axios.defaults.baseURL =
 const per_page = 12;
 
 const url = new URL(axios.defaults.baseURL);
-url.searchParams.append("completed", false);
+// url.searchParams.append("completed", false);
 url.searchParams.append("page", 1);
 url.searchParams.append("limit", per_page);
 
